@@ -11,6 +11,10 @@
 	background-color: rgb(44,44,44);
 	border-radius: 0.35vw 0 0 0.35vw;
 }
+.sidebar-content {
+	top:0;
+	position: fixed;
+}
 .logo {
 	border-bottom: 0.08vh solid gray;
 	width: 5vw;
@@ -68,11 +72,11 @@ i {
 .centerbar {
 	width: 20vw;
 	height: 100%;
-	left:0;
-	margin:0 5vw;
+	left:5vw;
 	position: fixed;
 	background-color: white;
 	border:0.01vh solid lightgray;
+	overflow-y: auto;
 }
 .search-area {
     height: 10vh;
@@ -83,14 +87,14 @@ i {
 	position: relative;
 	padding: 0 1vw 0 2.5vw; 
 	top: 2vh;
-  	width: 14vw;
+	width: 14vw;
   	height: 5vh;
    	border: 0.01vh transparent;
   	border-radius: 12vh;
   	margin:0.5vh 1vw;
   	background:white;
   	outline: none;
-  }
+}
 .search-icon {
   	position: absolute;
   	top: 1vh;
@@ -126,20 +130,23 @@ i {
 }
 #time-date {
 	right:0;
+	font-size: 1vw;
 	position: absolute;
-	margin: auto 1.5vw;
+	margin: auto 0.5vw;
 	color: lightgray;
 }
 .mail-expanded {
 	width: 68vw;
 	height: 100%;
-	right: 0;
+	left: 29vw;
 	position: fixed;
 	border-radius: 0 0.35vw 0.35vw 0;
 	padding-right: 3.5vw;
+	background-color: white;
+	overflow-y: auto;
 }	
 .top-left-icons{
-	
+	font-size: 2.2vh;
 }
 h5 {
 	margin-bottom: 0.7vh;
@@ -228,7 +235,6 @@ h2 {
 	width: 8vw;
 	height: 15vh;
 	margin: 0 0.5vw;
-
 }
 .img-download {
 	width: 68vw;
@@ -248,12 +254,11 @@ h2 {
 	top:0;
 	position: absolute;
 	border-left: 0.1vh solid lightgray;
-	
 }
 .usr-input {
-		width: 70vw;
-		height: 100%;
-		position: relative;
+	width: 70vw;
+	height: 100%;
+	position: relative;
 }
 .user {
 	font-size: 1vw;
@@ -266,6 +271,7 @@ h2 {
 	position: absolute;
 	border-bottom: none;
 	font-size: 2vh;
+	outline: none;
 }
 .send {
 	right: 2.5vw;
@@ -339,7 +345,6 @@ h2 {
 	position: absolute;
   	z-index: 1;
   	top: 5.5vh;
-  	
 }
 .tooltip:hover .tooltipcontent{
 	visibility: visible;
@@ -363,7 +368,6 @@ h2 {
 #drpdwn-arrow {
 	color: lightgray;
 	margin-left: 0.3vw;
-
 }
 #fnts{
 	display: inline;
@@ -375,4 +379,54 @@ h2 {
 }
 #drpdwn{
 	margin: 0vw;
+}
+#openbtn {
+	display: none;
+}
+#closebtn {
+	display: none;
+}
+@media only screen and (max-width: 915px){
+	.sidebar {
+		margin-left: -5vw;
+		transition: 0.3s ease;
+	}
+	.centerbar {
+		margin-left: -5vw; 
+		transition: 0.3s ease;
+	}
+	.mail-expanded {
+		margin-left: -5vw;
+		transition: 0.3s ease;	
+	}
+	#closebtn {
+		font-size: 2.5vw;
+		color: black;
+		text-decoration: none;
+		left:0.5vw;
+		top:1.7vh;
+		position: relative;
+		display: none;
+	}
+	#openbtn {
+		display: block;
+		font-size: 2.2vw;
+		cursor: pointer;
+		top:1.5vh;
+		position: relative;
+	}
+	.search-container {
+		position: relative;
+		left: 1.5vw;
+		top: -4.3vh; 
+		width: 11vw;
+  		height: 4.5vh; 
+  		font-size: 2.5vh;  		
+ 	}
+	.search-icon {
+  		position: absolute;
+  		left:0.8vw;
+  		color: lightgray;
+  		font-size: 1vw;
+	}
 }

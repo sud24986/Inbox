@@ -9,32 +9,37 @@
 		<link rel="stylesheet" type="text/css" href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css">
 	</head>
 	<body>
-		<div class="sidebar">
-			<img class="logo" alt="logo" src="Inbox.jpeg">
-			<div class="logo active"><i class="fas fa-inbox badge"></i>
-				<p id="p01">Inbox</p>
-			</div>				
-			<div class="logo"><i class="far fa-heart"></i>
-				<p id="p01">Dearest</p>
-			</div>
-			<div class="logo"><i class="far fa-file-alt"></i>
-				<p id="p01">Drafts</p>
-			</div>
-			<div class="logo"><i class="far fa-external-link"></i>
-				<p id="p01">Sent</p>
-			</div>
-			<div class="logo"><i class="fas fa-paperclip"></i>
-				<p id="p01">Files</p>
-			</div>
-			<div class="logo"><i class="far fa-list-ul"></i>
-				<p id="p01">Lists</p>
-			</div>
-			<div class="user-container">
-				<img class="user" id="user" alt="user" src="smiley face.jpg">
+		<script type="text/javascript" src="Inbox.js"></script>
+		<div id="sidebar" class="sidebar">
+			<div class="sidebar-content">
+				<img class="logo" alt="logo" src="Inbox.jpeg">
+				<div class="logo active"><i class="fas fa-inbox badge"></i>
+					<p id="p01">Inbox</p>
+				</div>				
+				<div class="logo"><i class="far fa-heart"></i>
+					<p id="p01">Dearest</p>
+				</div>
+				<div class="logo"><i class="far fa-file-alt"></i>
+					<p id="p01">Drafts</p>
+				</div>
+				<div class="logo"><i class="far fa-external-link"></i>
+					<p id="p01">Sent</p>
+				</div>
+				<div class="logo"><i class="fas fa-paperclip"></i>
+					<p id="p01">Files</p>
+				</div>
+				<div class="logo"><i class="far fa-list-ul"></i>
+					<p id="p01">Lists</p>
+				</div>
+				<div class="user-container">
+					<img class="user" id="user" alt="user" src="smiley face.jpg">
+				</div>
 			</div>
 		</div>
-		<div class="centerbar">
+		<div id="centerbar" class="centerbar">
 			<div class="search-area" >
+				<a href="javascript:void(1)" id="closebtn" onclick="closeNav()">&times;</a>
+				<span id="openbtn" onclick="openNav()">&#9776;</span>
     			<form action="/action_page.php">
     				<input class="search-container" type="text" placeholder="" name="search" autocomplete="off">
       				<div class="search-icon">
@@ -90,7 +95,7 @@
   				<p>Hi Victor Erixan, The following</p>
   			</div>
 		</div>
-		<div class="mail-expanded">
+		<div id="mailexp" class="mail-expanded">
 			<div class="top-left-icons">
 				<i class="dark fas fa-reply"></i>
 				<i class="highlighted fas fa-heart"></i>
